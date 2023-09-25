@@ -6,8 +6,8 @@ public:
 	int search(vector<int> &nums, int target)
 	{
 		int left = 0;
-		int right = nums.size() - 1;
-		while (left <= right) {
+		int right = nums.size() - 1; // 闭区间的右边界限是size() - 1
+		while (left <= right) { // 这里使用小于等于符号，因为使用的是闭区间
 			int middle = left + (right - left) / 2;
 			if (nums[middle] > target) {
 				right = middle - 1;
