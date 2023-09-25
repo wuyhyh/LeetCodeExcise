@@ -27,7 +27,7 @@ public:
 	{
 		int slow = 0;
 		for (int fast = 0; fast < nums.size(); ++fast) {
-			if (nums[fast] != val) {
+			if (nums[fast] != val) { // 不等于的时候，才能通过慢指针的划分
 				nums[slow++] = nums[fast];
 			}
 		}
